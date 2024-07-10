@@ -1,0 +1,128 @@
+---
+title: Test Draft Post
+author: khrisgriffis
+format: qmdmd-gfm
+meta:
+  excerpt: |
+    A test draft post
+  options:
+    - minihead
+  categories:
+    - missives
+  tags:
+    - featured
+    - neuroscience
+---
+```{r}
+#| label: setup
+knitr::opts_chunk$set(
+  fig.path = "./assets/images/"
+)
+getwd()
+```
+
+```{r}
+#| label: configure-python
+library("reticulate")
+matplotlib <- import("matplotlib")
+```
+
+## Introduction
+
+This is a sample document to demonstrate the usage of the `qmdMD` Quarto extension.
+
+## Code Example
+
+Below is a simple Python code block that will be processed by the extension with chunk options, `#| echo: true` and `#| output: asis`.
+
+```{python}
+#| echo: true
+#| output: asis
+print('Hello world')
+```
+
+Let's also use R:
+
+```{r}
+#| echo: true
+#| output: true
+a <- 5+4
+print(a)
+```
+
+Here is a plot in R where @fig-airquality further explores the impact of temperature on ozone level.
+
+```{r}
+#| label: fig-airquality
+#| fig-cap: "Temperature and ozone level."
+#| warning: false
+
+library(ggplot2)
+
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+
+## Code Example With Plot
+
+```{python}
+#| label: fig1
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+
+## Code Example With Pretty Table
+
+Here we can see that if we imported `numpy` above, we can use it in a different code cell.
+
+```{python}
+#| html-table-processing: none
+import pandas as pd
+
+temps = pd.DataFrame({
+  'year': [*range(1920, 1925)],
+  'Jan': [40.6, 44.2, 37.5, 41.8, 39.3], 
+  'Jun': [58.5, 58.7, 57.8, 52.7, 57.7]
+}).set_index('year')
+
+def make_pretty(styler):
+  styler.background_gradient(axis=None,
+    vmin=31, vmax=66, cmap="RdYlGn_r")
+  return styler
+
+temps.style.pipe(make_pretty)
+
+```
+
+
+## Inline Code Example
+
+Here is an example of inline code: $1+1=`{python} 1+1`$.
+
+## Math Example
+
+We can use the fundamental theorem of calculus to say that 
+$\int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$. 
+Also note that $\displaystyle \int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$. 
+
+We can also give this equation its own line
+
+$$
+	\int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}.
+$$
+
+## Conclusion
+
+This concludes the sample document. You can modify this template to suit your needs.

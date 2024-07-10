@@ -1,0 +1,15 @@
+title: QmdMD
+author: Khris Griffis, Ph.D.
+version: 1.0.0
+quarto-required: ">=1.5.53"
+contributes:
+  format:
+    common:
+      filters:
+        - quarto
+        - qmdmd.lua
+      pandoc:
+        template: templates/pandoc-template.md
+        to: markdown
+    gfm:
+      # pass
