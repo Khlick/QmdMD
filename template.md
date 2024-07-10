@@ -68,7 +68,7 @@ ggplot(airquality, aes(Temp, Ozone)) +
 
 <div id="fig-airquality">
 
-![](../assets/images/fig-airquality-1.png)
+![](./assets/images/fig-airquality-1.png)
 
 
 Figure 1: Temperature and ozone level.
@@ -92,7 +92,7 @@ ax.grid(True)
 plt.show()
 ```
 
-![](../assets/images/fig1-1.png)
+![](./assets/images/fig1-1.png)
 
 ## Code Example With Pretty Table
 
