@@ -2,6 +2,7 @@
 title: Test Draft Post
 author: khrisgriffis
 format: qmdmd-gfm
+engine: knitr
 meta:
   excerpt: |
     A test draft post
@@ -12,13 +13,18 @@ meta:
   tags:
     - featured
     - neuroscience
+qmdmd:
+  fig-rel: ".."
+  fig-root: "assets/figures"
 ---
 ```{r}
 #| label: setup
+#| eval: true
+# Currently, we can change the save directory if we use
+# the R libraries knitr and reticulate for parsing chunks.
 knitr::opts_chunk$set(
   fig.path = "./assets/images/"
 )
-getwd()
 ```
 
 ```{r}
@@ -85,7 +91,7 @@ plt.show()
 
 ## Code Example With Pretty Table
 
-Here we can see that if we imported `numpy` above, we can use it in a different code cell.
+By setting the chunk option `#| html-table-processing: none`, Quarto will process the code chunk and return a _pretty_ table in HTML.
 
 ```{python}
 #| html-table-processing: none
@@ -109,13 +115,42 @@ temps.style.pipe(make_pretty)
 
 ## Inline Code Example
 
-Here is an example of inline code: $1+1=`{python} 1+1`$.
+Let's generate a variable containing some calculated information in a code chunk, then use it later in markdown as inline 
+
+```{r}
+#| label: code-boot
+set.seed(0)
+data <- rchisq(20, df = 5)
+xbar <- mean(data)
+
+# Monte Carlo resampling function
+bootstrap_resample <- function(data, n_resamples = 2000) {
+  n <- length(data)
+  resamples <- matrix(NA, nrow = n_resamples, ncol = n)
+  for (i in 1:n_resamples) {
+    resamples[i, ] <- sample(data, size = n, replace = TRUE)
+  }
+  return(resamples)
+}
+
+# Calculate bootstrap samples for confidence intervals
+bootstrap_samples <- bootstrap_resample(data)
+bootstrap_means <- apply(bootstrap_samples, 1, mean)
+
+# Simple percentile 95% confidence intervals
+alpha <- 0.05
+ci95 <- quantile(bootstrap_means, probs = c(alpha / 2, 1 - alpha / 2))
+```
+
+The estimated mean of the sample is `{r} sprintf("%.3g (%.3g, %.3g)", xbar, ci95[1], ci95[2])`.
+
+_Note: Inline expressions appear to only work for R chunks, i.e. `{{r}} expr`, when implied or defined engine is knitr. For example, the expression `{{python}} 1+1` produces `{python} 1+1` instead of 2._
 
 ## Math Example
 
 We can use the fundamental theorem of calculus to say that 
 $\int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$. 
-Also note that $\displaystyle \int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$. 
+And we can insert a `displaystyle` to the inline: $\displaystyle \int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$. 
 
 We can also give this equation its own line
 
