@@ -14,28 +14,21 @@ meta:
     - featured
     - neuroscience
 qmdmd:
-  fig-rel: ".."
-  fig-root: "assets/figures"
+  fig-rel: "."
+  fig-root: "assets/images"
 ---
-```{r}
-#| label: setup
-#| eval: true
-# Currently, we can change the save directory if we use
-# the R libraries knitr and reticulate for parsing chunks.
-knitr::opts_chunk$set(
-  fig.path = "./assets/images/"
-)
-```
 
 ```{r}
 #| label: configure-python
+#| echo: false
 library("reticulate")
+numpy <- import("numpy")
 matplotlib <- import("matplotlib")
 ```
 
 ## Introduction
 
-This is a sample document to demonstrate the usage of the `qmdMD` Quarto extension.
+This is a sample document to demonstrate the usage of the `QmdMD` Quarto extension.
 
 ## Code Example
 
@@ -87,7 +80,6 @@ ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 plt.show()
 ```
-
 
 ## Code Example With Pretty Table
 
@@ -150,13 +142,18 @@ _Note: Inline expressions appear to only work for R chunks, i.e. `{{r}} expr`, w
 
 We can use the fundamental theorem of calculus to say that 
 $\int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$. 
+
 And we can insert a `displaystyle` to the inline: $\displaystyle \int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$. 
 
-We can also give this equation its own line
+We can also give this equation its own block:
 
 $$
 	\int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}.
 $$
+
+## Inserted Image
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ojleC2mULCBHamdrJaKVXt428YbVIjNcXmDL6SmWPvd7JTU&s)
 
 ## Conclusion
 

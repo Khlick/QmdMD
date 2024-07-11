@@ -2,7 +2,7 @@
 author: khrisgriffis
 categories:
 - missives
-date: "2024-07-11 00:23:13 -0700"
+date: "2024-07-11 14:13:03 -0700"
 excerpt: |
   A test draft post
 generated_on: 2024-07-11
@@ -16,22 +16,9 @@ title: Test Draft Post
 
 # Test Draft Post
 
-``` r
-# Currently, we can change the save directory if we use
-# the R libraries knitr and reticulate for parsing chunks.
-knitr::opts_chunk$set(
-  fig.path = "./assets/images/"
-)
-```
-
-``` r
-library("reticulate")
-matplotlib <- import("matplotlib")
-```
-
 ## Introduction
 
-This is a sample document to demonstrate the usage of the `qmdMD` Quarto
+This is a sample document to demonstrate the usage of the `QmdMD` Quarto
 extension.
 
 ## Code Example
@@ -67,7 +54,7 @@ ggplot(airquality, aes(Temp, Ozone)) +
 
 <div id="fig-airquality">
 
-![](../assets/figures/fig-airquality-1.png)
+![](assets/images/fig-airquality-1.png)
 
 
 Figure 1: Temperature and ozone level.
@@ -91,7 +78,7 @@ ax.grid(True)
 plt.show()
 ```
 
-![](../assets/figures/fig1-1.png)
+![](assets/images/fig1-1.png)
 
 ## Code Example With Pretty Table
 
@@ -116,53 +103,53 @@ temps.style.pipe(make_pretty)
 ```
 
 <style type="text/css">
-#T_d1015_row0_col0 {
+#T_0a85b_row0_col0 {
   background-color: #96d268;
   color: #000000;
 }
-#T_d1015_row0_col1 {
+#T_0a85b_row0_col1 {
   background-color: #f57547;
   color: #f1f1f1;
 }
-#T_d1015_row1_col0 {
+#T_0a85b_row1_col0 {
   background-color: #cdea83;
   color: #000000;
 }
-#T_d1015_row1_col1 {
+#T_0a85b_row1_col1 {
   background-color: #f57245;
   color: #f1f1f1;
 }
-#T_d1015_row2_col0 {
+#T_0a85b_row2_col0 {
   background-color: #5ab760;
   color: #f1f1f1;
 }
-#T_d1015_row2_col1 {
+#T_0a85b_row2_col1 {
   background-color: #f7814c;
   color: #f1f1f1;
 }
-#T_d1015_row3_col0 {
+#T_0a85b_row3_col0 {
   background-color: #a9da6c;
   color: #000000;
 }
-#T_d1015_row3_col1 {
+#T_0a85b_row3_col1 {
   background-color: #fed683;
   color: #000000;
 }
-#T_d1015_row4_col0 {
+#T_0a85b_row4_col0 {
   background-color: #7dc765;
   color: #000000;
 }
-#T_d1015_row4_col1 {
+#T_0a85b_row4_col1 {
   background-color: #f7844e;
   color: #f1f1f1;
 }
 </style>
-<table id="T_d1015">
+<table id="T_0a85b">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_d1015_level0_col0" class="col_heading level0 col0" >Jan</th>
-      <th id="T_d1015_level0_col1" class="col_heading level0 col1" >Jun</th>
+      <th id="T_0a85b_level0_col0" class="col_heading level0 col0" >Jan</th>
+      <th id="T_0a85b_level0_col1" class="col_heading level0 col1" >Jun</th>
     </tr>
     <tr>
       <th class="index_name level0" >year</th>
@@ -172,29 +159,29 @@ temps.style.pipe(make_pretty)
   </thead>
   <tbody>
     <tr>
-      <th id="T_d1015_level0_row0" class="row_heading level0 row0" >1920</th>
-      <td id="T_d1015_row0_col0" class="data row0 col0" >40.600000</td>
-      <td id="T_d1015_row0_col1" class="data row0 col1" >58.500000</td>
+      <th id="T_0a85b_level0_row0" class="row_heading level0 row0" >1920</th>
+      <td id="T_0a85b_row0_col0" class="data row0 col0" >40.600000</td>
+      <td id="T_0a85b_row0_col1" class="data row0 col1" >58.500000</td>
     </tr>
     <tr>
-      <th id="T_d1015_level0_row1" class="row_heading level0 row1" >1921</th>
-      <td id="T_d1015_row1_col0" class="data row1 col0" >44.200000</td>
-      <td id="T_d1015_row1_col1" class="data row1 col1" >58.700000</td>
+      <th id="T_0a85b_level0_row1" class="row_heading level0 row1" >1921</th>
+      <td id="T_0a85b_row1_col0" class="data row1 col0" >44.200000</td>
+      <td id="T_0a85b_row1_col1" class="data row1 col1" >58.700000</td>
     </tr>
     <tr>
-      <th id="T_d1015_level0_row2" class="row_heading level0 row2" >1922</th>
-      <td id="T_d1015_row2_col0" class="data row2 col0" >37.500000</td>
-      <td id="T_d1015_row2_col1" class="data row2 col1" >57.800000</td>
+      <th id="T_0a85b_level0_row2" class="row_heading level0 row2" >1922</th>
+      <td id="T_0a85b_row2_col0" class="data row2 col0" >37.500000</td>
+      <td id="T_0a85b_row2_col1" class="data row2 col1" >57.800000</td>
     </tr>
     <tr>
-      <th id="T_d1015_level0_row3" class="row_heading level0 row3" >1923</th>
-      <td id="T_d1015_row3_col0" class="data row3 col0" >41.800000</td>
-      <td id="T_d1015_row3_col1" class="data row3 col1" >52.700000</td>
+      <th id="T_0a85b_level0_row3" class="row_heading level0 row3" >1923</th>
+      <td id="T_0a85b_row3_col0" class="data row3 col0" >41.800000</td>
+      <td id="T_0a85b_row3_col1" class="data row3 col1" >52.700000</td>
     </tr>
     <tr>
-      <th id="T_d1015_level0_row4" class="row_heading level0 row4" >1924</th>
-      <td id="T_d1015_row4_col0" class="data row4 col0" >39.300000</td>
-      <td id="T_d1015_row4_col1" class="data row4 col1" >57.700000</td>
+      <th id="T_0a85b_level0_row4" class="row_heading level0 row4" >1924</th>
+      <td id="T_0a85b_row4_col0" class="data row4 col0" >39.300000</td>
+      <td id="T_0a85b_row4_col1" class="data row4 col1" >57.700000</td>
     </tr>
   </tbody>
 </table>
@@ -237,15 +224,20 @@ the expression `{python} 1+1` produces `{python} 1+1` instead of 2.*
 ## Math Example
 
 We can use the fundamental theorem of calculus to say that
-$\int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$. And we
-can insert a `displaystyle` to the inline:
+$\int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$.
+
+And we can insert a `displaystyle` to the inline:
 $\displaystyle \int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}$.
 
-We can also give this equation its own line
+We can also give this equation its own block:
 
 $$
     \int_2^3 x^2 \, dx=\frac{3^3}{3}-\frac{2^3}{3}=\frac{19}{3}.
 $$
+
+## Inserted Image
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ojleC2mULCBHamdrJaKVXt428YbVIjNcXmDL6SmWPvd7JTU&s.png)
 
 ## Conclusion
 

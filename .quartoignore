@@ -1,4 +1,20 @@
+# Ignore all Python files
 *.py
+
+# Ignore the requirements file
 requirements.txt
-assets/*
+
+# Ignore everything in the assets directory
+assets/
+
+# Ignore the template markdown file
 template.md
+
+# Ignore the .github directory (usually for GitHub-specific configurations)
+.github/
+
+# Ignore the .git directory (for Git version control)
+.git/
+
+# Ignore the Lua configuration file
+.luarc.json
