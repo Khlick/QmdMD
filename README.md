@@ -26,7 +26,7 @@ The `qmdMD` extension supports customization through the `qmdmd` section in the 
 
 Here is an example of how to use these options in the YAML header of a Quarto document, `ggplot2-demo.qmd`:
 
-```markdown
+````markdown
 ---
 title: ggplot2 demo
 author: Khris Griffis, Ph.D.
@@ -51,7 +51,7 @@ ggplot(airquality, aes(Temp, Ozone)) +
   geom_point() + 
   geom_smooth(method = "loess")
 ```
-```
+````
 
 #### Example Renders
 
@@ -67,7 +67,7 @@ Rendering the file to quarto-style markdown with `quarto render ggplot2-demo-mar
 
 <div>
 
-```markdown
+````markdown
 [Figure 1](#fig-airquality){.quarto-xref}
 further explores the impact of temperature on ozone level.
 
@@ -84,7 +84,8 @@ ggplot(airquality, aes(Temp, Ozone)) +
 ![](./assets/images/fig-airquality-1.png)
 :::
 ::::
-```
+````
+
 _**Figure 2.** Markdown rendering in Quarto yields Quarto-style `cell` encodings. These encodings are not compatible with Kramdown or other GFM parsers._
 
 </div>
@@ -105,7 +106,9 @@ meta:
   options:
     - someOption
 ```
+
 Which will render at the base level of the output file's YAML front-matter:
+
 ```yaml
 tags:
 - featured
@@ -113,6 +116,7 @@ tags:
 options:
 - someOption
 ```
+
 The `.qmd` header is expected to have fields `author`, `title`, and `date`, where `date` is optional as the extension will automatically populate it with the rendered date (formatted as `%Y-%m-%d %H:%M:%S %z`). Further, the extension appends a new metadata field, `generated-on`, which has the date of rendering (formmatted as `%Y-%m-%d` ).
 
 ### File Management
