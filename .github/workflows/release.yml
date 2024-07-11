@@ -16,16 +16,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Generate changelog
         id: changelog
-        run: |
-          echo "::set-output name=changes::$(git log -1 --pretty=format:'%B')"
+        run: echo "changes=$(git log -1 --pretty=format:'%B')" >> $GITHUB_OUTPUT
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.ref }}
-          name: QmdMD Release ${{ github.ref }}
+          name: QmdMD Release ${{ github.ref_name }}
           body: |
-            ## QmdMD Quarto Extension (v${{ github.ref }})
+            ## QmdMD Quarto Extension (${{ github.ref_name }})
 
             QmdMD supercharges Quarto for static site generators by seamlessly adding header YAML, updating links, and relocating figures in your markdown files.
 

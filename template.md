@@ -2,7 +2,7 @@
 author: khrisgriffis
 categories:
 - missives
-date: "2024-07-11 14:13:03 -0700"
+date: "2024-07-11 16:25:39 -0700"
 excerpt: |
   A test draft post
 generated_on: 2024-07-11
@@ -103,53 +103,53 @@ temps.style.pipe(make_pretty)
 ```
 
 <style type="text/css">
-#T_0a85b_row0_col0 {
+#T_42efa_row0_col0 {
   background-color: #96d268;
   color: #000000;
 }
-#T_0a85b_row0_col1 {
+#T_42efa_row0_col1 {
   background-color: #f57547;
   color: #f1f1f1;
 }
-#T_0a85b_row1_col0 {
+#T_42efa_row1_col0 {
   background-color: #cdea83;
   color: #000000;
 }
-#T_0a85b_row1_col1 {
+#T_42efa_row1_col1 {
   background-color: #f57245;
   color: #f1f1f1;
 }
-#T_0a85b_row2_col0 {
+#T_42efa_row2_col0 {
   background-color: #5ab760;
   color: #f1f1f1;
 }
-#T_0a85b_row2_col1 {
+#T_42efa_row2_col1 {
   background-color: #f7814c;
   color: #f1f1f1;
 }
-#T_0a85b_row3_col0 {
+#T_42efa_row3_col0 {
   background-color: #a9da6c;
   color: #000000;
 }
-#T_0a85b_row3_col1 {
+#T_42efa_row3_col1 {
   background-color: #fed683;
   color: #000000;
 }
-#T_0a85b_row4_col0 {
+#T_42efa_row4_col0 {
   background-color: #7dc765;
   color: #000000;
 }
-#T_0a85b_row4_col1 {
+#T_42efa_row4_col1 {
   background-color: #f7844e;
   color: #f1f1f1;
 }
 </style>
-<table id="T_0a85b">
+<table id="T_42efa">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_0a85b_level0_col0" class="col_heading level0 col0" >Jan</th>
-      <th id="T_0a85b_level0_col1" class="col_heading level0 col1" >Jun</th>
+      <th id="T_42efa_level0_col0" class="col_heading level0 col0" >Jan</th>
+      <th id="T_42efa_level0_col1" class="col_heading level0 col1" >Jun</th>
     </tr>
     <tr>
       <th class="index_name level0" >year</th>
@@ -159,29 +159,29 @@ temps.style.pipe(make_pretty)
   </thead>
   <tbody>
     <tr>
-      <th id="T_0a85b_level0_row0" class="row_heading level0 row0" >1920</th>
-      <td id="T_0a85b_row0_col0" class="data row0 col0" >40.600000</td>
-      <td id="T_0a85b_row0_col1" class="data row0 col1" >58.500000</td>
+      <th id="T_42efa_level0_row0" class="row_heading level0 row0" >1920</th>
+      <td id="T_42efa_row0_col0" class="data row0 col0" >40.600000</td>
+      <td id="T_42efa_row0_col1" class="data row0 col1" >58.500000</td>
     </tr>
     <tr>
-      <th id="T_0a85b_level0_row1" class="row_heading level0 row1" >1921</th>
-      <td id="T_0a85b_row1_col0" class="data row1 col0" >44.200000</td>
-      <td id="T_0a85b_row1_col1" class="data row1 col1" >58.700000</td>
+      <th id="T_42efa_level0_row1" class="row_heading level0 row1" >1921</th>
+      <td id="T_42efa_row1_col0" class="data row1 col0" >44.200000</td>
+      <td id="T_42efa_row1_col1" class="data row1 col1" >58.700000</td>
     </tr>
     <tr>
-      <th id="T_0a85b_level0_row2" class="row_heading level0 row2" >1922</th>
-      <td id="T_0a85b_row2_col0" class="data row2 col0" >37.500000</td>
-      <td id="T_0a85b_row2_col1" class="data row2 col1" >57.800000</td>
+      <th id="T_42efa_level0_row2" class="row_heading level0 row2" >1922</th>
+      <td id="T_42efa_row2_col0" class="data row2 col0" >37.500000</td>
+      <td id="T_42efa_row2_col1" class="data row2 col1" >57.800000</td>
     </tr>
     <tr>
-      <th id="T_0a85b_level0_row3" class="row_heading level0 row3" >1923</th>
-      <td id="T_0a85b_row3_col0" class="data row3 col0" >41.800000</td>
-      <td id="T_0a85b_row3_col1" class="data row3 col1" >52.700000</td>
+      <th id="T_42efa_level0_row3" class="row_heading level0 row3" >1923</th>
+      <td id="T_42efa_row3_col0" class="data row3 col0" >41.800000</td>
+      <td id="T_42efa_row3_col1" class="data row3 col1" >52.700000</td>
     </tr>
     <tr>
-      <th id="T_0a85b_level0_row4" class="row_heading level0 row4" >1924</th>
-      <td id="T_0a85b_row4_col0" class="data row4 col0" >39.300000</td>
-      <td id="T_0a85b_row4_col1" class="data row4 col1" >57.700000</td>
+      <th id="T_42efa_level0_row4" class="row_heading level0 row4" >1924</th>
+      <td id="T_42efa_row4_col0" class="data row4 col0" >39.300000</td>
+      <td id="T_42efa_row4_col1" class="data row4 col1" >57.700000</td>
     </tr>
   </tbody>
 </table>
